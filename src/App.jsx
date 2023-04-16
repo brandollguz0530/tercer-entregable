@@ -41,7 +41,7 @@ function App() {
         <Location location={location}/>
         <ResidentLiss location={location}/>
 
-        <button>hola</button>
+      
     </div>
    
   )

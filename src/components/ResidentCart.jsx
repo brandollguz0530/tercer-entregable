@@ -22,10 +22,19 @@ const ResidentCart = ({resident}) => {
 
   return (
     <article>
-      <div className=' relative'>
-        <img src={residentsInfo?.image} alt="" />
-          <div className=' absolute bottom-0 left-1/2'>
-            <div></div>
+      <div className='relative'>
+        <img className='w-full' src={residentsInfo?.image} alt="" />
+          <div className=' bg-[#020A02CC] absolute bottom-4 left-1/2 -translate-x-1/2 text-white border border-green-500 px-7 p-1 flex gap-3 items-center rounded-sm'>
+            {
+              residentsInfo?.status === "Alive" ?
+              <div className=' bg-green-600 w-3 h-3 rounded-full '></div> : 
+              residentsInfo?.status === "Dead" ?
+              <div className=' bg-red-600 w-3 h-3 rounded-full '></div> :
+              <div className=' bg-gray-600 w-3 h-3 rounded-full '></div>
+            }
+           
+            
+            
             <span>{residentsInfo?.status}</span>
           </div>
       </div>
