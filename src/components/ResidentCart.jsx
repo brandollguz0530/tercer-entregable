@@ -21,7 +21,7 @@ const ResidentCart = ({resident}) => {
     }, [])
 
   return (
-    <article  className='border'>
+    <article>
       <div className=' relative'>
         <img src={residentsInfo?.image} alt="" />
           <div className=' absolute bottom-0 left-1/2'>

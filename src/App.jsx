@@ -40,8 +40,10 @@ function App() {
     </form>
         <Location location={location}/>
         <ResidentLiss location={location}/>
-    </div>
 
+        <button>hola</button>
+    </div>
+   
   )
   }
 
