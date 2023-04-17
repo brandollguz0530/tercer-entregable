@@ -3,16 +3,10 @@ import React, { useEffect, useState } from 'react'
 
 
 
-    const residentsStatus = {
-      Alive: "bg-green-500",
-      Dead: " bg-red-500",
-      unknown: "bg-grey-500"
-
-
-    }
 
 const ResidentCart = ({resident}) => {
       const [residentsInfo, setResidentsInfo] = useState()
+    
 
     useEffect(() =>{
       axios.get(resident)
@@ -32,7 +26,6 @@ const ResidentCart = ({resident}) => {
               <div className=' bg-red-600 w-3 h-3 rounded-full '></div> :
               <div className=' bg-gray-600 w-3 h-3 rounded-full '></div>
             }
-           
             
             
             <span>{residentsInfo?.status}</span>

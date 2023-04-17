@@ -13,7 +13,7 @@ function App() {
 
     const handleSubmit = (e) => {
       e.preventDefault()
-        const newLocation = e.target.locationId.valie
+        const newLocation = e.target.locationId.value
 
         const URL = `https://rickandmortyapi.com/api/location/${newLocation}`
         axios.get(URL)
@@ -30,11 +30,12 @@ function App() {
 
   }, [])   
   return (
-    <div className="App">
-    <form onSubmit={handleSubmit} >
+    <div className="App " >
+    
+    <form onSubmit={handleSubmit}>
       <div>
-        <input id='locationId' placeholder='type a location Id...'  className=' border-2' type="text" />
-        <button  >search <i class='bx bx-search-alt-2 bx-burst' ></i></button>
+        <input id='locationId' placeholder='type a location Id...'  className=' border-2 ' type="text" />
+        <button>search <i className='bx bx-search-alt-2 bx-burst'></i></button>
       </div>
       <h2>welcome to the crazy univese!</h2>
     </form>

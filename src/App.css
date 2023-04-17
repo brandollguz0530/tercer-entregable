@@ -1,0 +1,13 @@
+body {
+    background-image: url("./images/Ry.png");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .App {
+    background-image: url("./images/header.png");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+  }
+  
