@@ -15,7 +15,7 @@ const ResidentCart = ({resident}) => {
     }, [])
 
   return (
-    <article>
+    <article className=' border-2 border-green-500 rounded-md mb-4'>
       <div className='relative'>
         <img className='w-full' src={residentsInfo?.image} alt="" />
           <div className=' bg-[#020A02CC] absolute bottom-4 left-1/2 -translate-x-1/2 text-white border border-green-500 px-7 p-1 flex gap-3 items-center rounded-sm'>
@@ -32,8 +32,8 @@ const ResidentCart = ({resident}) => {
           </div>
       </div>
       <section>
-        <h3>{residentsInfo?.name}</h3>
-        <ul>
+        <h3 className=' text-white text-center py-2 font-semibold'>{residentsInfo?.name}</h3>
+        <ul className=' text-white text-center py-3'>
           <li>
             <span>Species</span>
             <span>{residentsInfo?.species}</span>

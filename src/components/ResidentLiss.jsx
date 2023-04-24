@@ -23,17 +23,27 @@ const ResidentLiss = ({location}) => {
   }, [location])
   return (
     <>
-    <section className=' mt-[250px] border border-green-500 p-4 grid gap-6 auto-rows-auto grid-cols-[repeat(auto-fill,_minmax(220px,_1fr))] max-w-[1000px] mx-auto'>
+    <section className=' mt-[50px]  p-4 grid gap-6 auto-rows-auto grid-cols-[repeat(auto-fill,_minmax(220px,_1fr))] max-w-[1000px] mx-auto'>
         {
           residents?.slice(startCut, endCut).map((resident) => ( <ResidentCart key={resident} resident={resident} />))
         }
     </section>
 
-    <ul className='flex gap-4 justify-center py-4'>
-      {
-        arrayPages.map(page => <li onClick={() => setCurrenPage(page)} className={`p-3 cursor-pointer rounded-md ${page === currenPage && "bg-green-600 text-white font-bold"}`} key={page}>{page}</li>)
-      }
-    </ul>
+    <ul class="flex gap-4 justify-center py-4">
+  {arrayPages.map(page => (
+    <li
+      class={`p-3 cursor-pointer rounded-md ${
+        page === currenPage
+          ? 'bg-green-600 text-white font-bold'
+          : 'border border-green-500 text-white'
+      }`}
+      key={page}
+      onClick={() => setCurrenPage(page)}
+    >
+      {page}
+    </li>
+  ))}
+</ul>
     
     </>
   )

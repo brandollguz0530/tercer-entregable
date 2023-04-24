@@ -3,7 +3,8 @@ import React from 'react'
 const Location = ({location}) => {
     
   return (
-    <section>
+    <div className=' mt-[-300px]'>
+    <section className=' text-center text-white'>
         <h2>{location?.name}</h2>
         <ul>
             <li>Type: {location?.type}</li>
@@ -11,6 +12,9 @@ const Location = ({location}) => {
             <li>Population: {location?.residents.length}</li>
         </ul>
     </section>
+    </div>
+
+    
   )
 }
 
